@@ -1,0 +1,23 @@
+<div *ngIf="(error$ | async) as error">
+  <div class="alert alert-danger">{{ error }}</div>
+</div>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let rights of (rights$ | async)">
+      <td>{{ rights.id }}</td>
+      <td>{{ rights.name }}</td>
+      <td>
+        <button class="btn btn-danger btn-sm" (click)="deleteRights(rights.id)">Delete</button>
+        <!-- Add edit button/navigation as needed -->
+      </td>
+    </tr>
+  </tbody>
+</table>

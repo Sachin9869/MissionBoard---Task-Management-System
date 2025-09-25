@@ -1,0 +1,324 @@
+{
+  "Roles": [
+    {
+      "Id": 1,
+      "Name": "Admin",
+      "Description": "System administrator with full access"
+    },
+    {
+      "Id": 2,
+      "Name": "Manager",
+      "Description": "Team manager with team oversight capabilities"
+    },
+    {
+      "Id": 3,
+      "Name": "Developer",
+      "Description": "Software developer working on tasks"
+    },
+    {
+      "Id": 4,
+      "Name": "QA",
+      "Description": "Quality assurance engineer"
+    },
+    {
+      "Id": 5,
+      "Name": "Business",
+      "Description": "Business analyst or stakeholder"
+    }
+  ],
+  "Rights": [
+    {
+      "Id": 1,
+      "Name": "user.manage",
+      "Description": "Create, update, delete users"
+    },
+    {
+      "Id": 2,
+      "Name": "role.manage",
+      "Description": "Manage roles and permissions"
+    },
+    {
+      "Id": 3,
+      "Name": "task.create",
+      "Description": "Create new tasks"
+    },
+    {
+      "Id": 4,
+      "Name": "task.assign",
+      "Description": "Assign tasks to users"
+    },
+    {
+      "Id": 5,
+      "Name": "task.update_status",
+      "Description": "Update task status"
+    },
+    {
+      "Id": 6,
+      "Name": "task.view_all",
+      "Description": "View all tasks in the system"
+    },
+    {
+      "Id": 7,
+      "Name": "task.delete",
+      "Description": "Delete tasks"
+    },
+    {
+      "Id": 8,
+      "Name": "task.comment",
+      "Description": "Add comments to tasks"
+    },
+    {
+      "Id": 9,
+      "Name": "team.manage",
+      "Description": "Manage teams and team membership"
+    }
+  ],
+  "RoleRights": [
+    { "RoleId": 1, "RightId": 1 },
+    { "RoleId": 1, "RightId": 2 },
+    { "RoleId": 1, "RightId": 3 },
+    { "RoleId": 1, "RightId": 4 },
+    { "RoleId": 1, "RightId": 5 },
+    { "RoleId": 1, "RightId": 6 },
+    { "RoleId": 1, "RightId": 7 },
+    { "RoleId": 1, "RightId": 8 },
+    { "RoleId": 1, "RightId": 9 },
+    { "RoleId": 2, "RightId": 3 },
+    { "RoleId": 2, "RightId": 4 },
+    { "RoleId": 2, "RightId": 6 },
+    { "RoleId": 2, "RightId": 8 },
+    { "RoleId": 3, "RightId": 5 },
+    { "RoleId": 3, "RightId": 8 },
+    { "RoleId": 4, "RightId": 5 },
+    { "RoleId": 4, "RightId": 8 },
+    { "RoleId": 5, "RightId": 3 },
+    { "RoleId": 5, "RightId": 8 }
+  ],
+  "Users": [
+    {
+      "Id": "u-admin-1",
+      "UserName": "admin",
+      "Email": "admin@missionboard.com",
+      "PasswordHash": "admin123",
+      "TeamId": null,
+      "CreatedAt": "2025-01-01T00:00:00Z",
+      "IsActive": true
+    },
+    {
+      "Id": "u-manager-1",
+      "UserName": "manager1",
+      "Email": "manager1@missionboard.com",
+      "PasswordHash": "manager123",
+      "TeamId": "11111111-1111-1111-1111-111111111111",
+      "CreatedAt": "2025-01-01T00:00:00Z",
+      "IsActive": true
+    },
+    {
+      "Id": "u-manager-2",
+      "UserName": "manager2",
+      "Email": "manager2@missionboard.com",
+      "PasswordHash": "manager123",
+      "TeamId": "22222222-2222-2222-2222-222222222222",
+      "CreatedAt": "2025-01-01T00:00:00Z",
+      "IsActive": true
+    },
+    {
+      "Id": "u-dev-1",
+      "UserName": "dev1",
+      "Email": "dev1@missionboard.com",
+      "PasswordHash": "dev123",
+      "TeamId": "11111111-1111-1111-1111-111111111111",
+      "CreatedAt": "2025-01-01T00:00:00Z",
+      "IsActive": true
+    },
+    {
+      "Id": "u-dev-2",
+      "UserName": "dev2",
+      "Email": "dev2@missionboard.com",
+      "PasswordHash": "dev123",
+      "TeamId": "22222222-2222-2222-2222-222222222222",
+      "CreatedAt": "2025-01-01T00:00:00Z",
+      "IsActive": true
+    },
+    {
+      "Id": "u-qa-1",
+      "UserName": "qa1",
+      "Email": "qa1@missionboard.com",
+      "PasswordHash": "qa123",
+      "TeamId": "11111111-1111-1111-1111-111111111111",
+      "CreatedAt": "2025-01-01T00:00:00Z",
+      "IsActive": true
+    },
+    {
+      "Id": "u-qa-2",
+      "UserName": "qa2",
+      "Email": "qa2@missionboard.com",
+      "PasswordHash": "qa123",
+      "TeamId": "22222222-2222-2222-2222-222222222222",
+      "CreatedAt": "2025-01-01T00:00:00Z",
+      "IsActive": true
+    },
+    {
+      "Id": "u-business-1",
+      "UserName": "business1",
+      "Email": "business1@missionboard.com",
+      "PasswordHash": "business123",
+      "TeamId": null,
+      "CreatedAt": "2025-01-01T00:00:00Z",
+      "IsActive": true
+    }
+  ],
+  "Teams": [
+    {
+      "Id": "11111111-1111-1111-1111-111111111111",
+      "Name": "Alpha Team",
+      "Description": "Frontend development team",
+      "ManagerUserId": "u-manager-1",
+      "CreatedAt": "2025-01-01T00:00:00Z",
+      "IsActive": true
+    },
+    {
+      "Id": "22222222-2222-2222-2222-222222222222",
+      "Name": "Beta Team",
+      "Description": "Backend development team",
+      "ManagerUserId": "u-manager-2",
+      "CreatedAt": "2025-01-01T00:00:00Z",
+      "IsActive": true
+    }
+  ],
+  "UserRoles": [
+    { "UserId": "u-admin-1", "RoleId": 1 },
+    { "UserId": "u-manager-1", "RoleId": 2 },
+    { "UserId": "u-manager-2", "RoleId": 2 },
+    { "UserId": "u-dev-1", "RoleId": 3 },
+    { "UserId": "u-dev-2", "RoleId": 3 },
+    { "UserId": "u-qa-1", "RoleId": 4 },
+    { "UserId": "u-qa-2", "RoleId": 4 },
+    { "UserId": "u-business-1", "RoleId": 5 }
+  ],
+  "Tasks": [
+    {
+      "Id": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
+      "Title": "Implement JWT Authentication",
+      "Description": "Create secure authentication system using JWT tokens with role-based access control",
+      "Status": 2,
+      "Priority": 2,
+      "CreatedById": "u-admin-1",
+      "AssigneeId": "u-dev-1",
+      "TeamId": "11111111-1111-1111-1111-111111111111",
+      "CreatedAt": "2025-01-15T09:00:00Z",
+      "UpdatedAt": "2025-01-16T14:30:00Z",
+      "DueDate": "2025-01-25T17:00:00Z",
+      "EstimatedHours": 16.0,
+      "IsActive": true,
+      "Comments": [
+        {
+          "Id": "c1111111-1111-1111-1111-111111111111",
+          "AuthorId": "u-admin-1",
+          "Text": "Start with basic JWT implementation, then add role-based policies",
+          "CreatedAt": "2025-01-15T09:15:00Z",
+          "IsDeleted": false
+        },
+        {
+          "Id": "c2222222-2222-2222-2222-222222222222",
+          "AuthorId": "u-dev-1",
+          "Text": "JWT implementation completed, working on authorization policies now",
+          "CreatedAt": "2025-01-16T14:30:00Z",
+          "IsDeleted": false
+        }
+      ]
+    },
+    {
+      "Id": "bbbbbbbb-bbbb-bbbb-bbbb-bbbbbbbbbbbb",
+      "Title": "Design User Dashboard",
+      "Description": "Create responsive dashboard layout for different user roles",
+      "Status": 1,
+      "Priority": 1,
+      "CreatedById": "u-manager-1",
+      "AssigneeId": "u-dev-1",
+      "TeamId": "11111111-1111-1111-1111-111111111111",
+      "CreatedAt": "2025-01-16T10:00:00Z",
+      "DueDate": "2025-01-30T17:00:00Z",
+      "EstimatedHours": 24.0,
+      "IsActive": true,
+      "Comments": []
+    },
+    {
+      "Id": "cccccccc-cccc-cccc-cccc-cccccccccccc",
+      "Title": "Setup API Documentation",
+      "Description": "Configure Swagger/OpenAPI for comprehensive API documentation",
+      "Status": 0,
+      "Priority": 1,
+      "CreatedById": "u-manager-2",
+      "AssigneeId": "u-dev-2",
+      "TeamId": "22222222-2222-2222-2222-222222222222",
+      "CreatedAt": "2025-01-17T11:00:00Z",
+      "DueDate": "2025-01-22T17:00:00Z",
+      "EstimatedHours": 8.0,
+      "IsActive": true,
+      "Comments": [
+        {
+          "Id": "c3333333-3333-3333-3333-333333333333",
+          "AuthorId": "u-manager-2",
+          "Text": "Include authentication examples and error response schemas",
+          "CreatedAt": "2025-01-17T11:15:00Z",
+          "IsDeleted": false
+        }
+      ]
+    },
+    {
+      "Id": "dddddddd-dddd-dddd-dddd-dddddddddddd",
+      "Title": "Implement Drag-Drop Kanban Board",
+      "Description": "Create interactive Kanban board with Angular CDK drag-drop functionality",
+      "Status": 0,
+      "Priority": 2,
+      "CreatedById": "u-business-1",
+      "AssigneeId": null,
+      "TeamId": "11111111-1111-1111-1111-111111111111",
+      "CreatedAt": "2025-01-18T14:00:00Z",
+      "DueDate": "2025-02-05T17:00:00Z",
+      "EstimatedHours": 20.0,
+      "IsActive": true,
+      "Comments": []
+    },
+    {
+      "Id": "eeeeeeee-eeee-eeee-eeee-eeeeeeeeeeee",
+      "Title": "Unit Testing Setup",
+      "Description": "Configure Jest/Jasmine testing framework and write initial test suites",
+      "Status": 3,
+      "Priority": 1,
+      "CreatedById": "u-qa-1",
+      "AssigneeId": "u-qa-1",
+      "TeamId": "11111111-1111-1111-1111-111111111111",
+      "CreatedAt": "2025-01-19T08:30:00Z",
+      "UpdatedAt": "2025-01-20T16:45:00Z",
+      "DueDate": "2025-01-28T17:00:00Z",
+      "EstimatedHours": 12.0,
+      "IsActive": true,
+      "Comments": [
+        {
+          "Id": "c4444444-4444-4444-4444-444444444444",
+          "AuthorId": "u-qa-1",
+          "Text": "Testing framework configured, writing component tests now",
+          "CreatedAt": "2025-01-20T16:45:00Z",
+          "IsDeleted": false
+        }
+      ]
+    },
+    {
+      "Id": "ffffffff-ffff-ffff-ffff-ffffffffffff",
+      "Title": "Database Migration Strategy",
+      "Description": "Plan migration from in-memory database to SQL Server for production",
+      "Status": 0,
+      "Priority": 0,
+      "CreatedById": "u-admin-1",
+      "AssigneeId": "u-dev-2",
+      "TeamId": "22222222-2222-2222-2222-222222222222",
+      "CreatedAt": "2025-01-20T13:00:00Z",
+      "DueDate": "2025-02-15T17:00:00Z",
+      "EstimatedHours": 16.0,
+      "IsActive": true,
+      "Comments": []
+    }
+  ]
+}

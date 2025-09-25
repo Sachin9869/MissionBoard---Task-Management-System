@@ -1,0 +1,31 @@
+<div *ngIf="(error$ | async) as error">
+  <div class="alert alert-danger">{{ error }}</div>
+</div>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Title</th>
+      <th>Description</th>
+      <th>Assigned To</th>
+      <th>Team</th>
+      <th>Completed</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let task of (taskItems$ | async)">
+      <td>{{ task.id }}</td>
+      <td>{{ task.title }}</td>
+      <td>{{ task.description }}</td>
+      <td>{{ task.assignedToId }}</td>
+      <td>{{ task.teamId }}</td>
+      <td>{{ task.isCompleted ? 'Yes' : 'No' }}</td>
+      <td>
+        <button class="btn btn-danger btn-sm" (click)="deleteTaskItem(task.id)">Delete</button>
+        <!-- Add edit button/navigation as needed -->
+      </td>
+    </tr>
+  </tbody>
+</table>
